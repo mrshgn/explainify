@@ -1,0 +1,75 @@
+project_id = "zkykndklekrrnsnykkye"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+
+[db.pooler]
+enabled = false
+port = 54329
+pool_mode = "transaction"
+default_pool_size = 25
+max_client_conn = 100
+
+[realtime]
+enabled = true
+port = 54324
+tenant_id = "realtime-dev"
+api_host = "0.0.0.0"
+api_port = 4000
+
+[studio]
+enabled = true
+port = 54323
+api_url = "http://127.0.0.1:54321"
+openai_api_key = "env(OPENAI_API_KEY)"
+
+[inbucket]
+enabled = true
+port = 54325
+smtp_port = 54326
+pop3_port = 54327
+
+[storage]
+enabled = true
+port = 54328
+file_size_limit = "50MiB"
+bucket_defaults = { public = false, file_size_limit = "50MiB", allowed_mime_types = ["image/jpeg", "image/png", "image/webp", "image/gif", "text/plain", "application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"] }
+
+[auth]
+enabled = true
+port = 54325
+site_url = "http://127.0.0.1:54321"
+additional_redirect_urls = ["https://127.0.0.1:54321"]
+jwt_expiry = 3600
+enable_signup = true
+email_double_confirm_changes = true
+enable_manual_linking = false
+
+[edge_runtime]
+enabled = true
+port = 54326
+inspector_port = 5432
+
+[analytics]
+enabled = false
+port = 54327
+vector_port = 54328
+gcp_project_id = ""
+gcp_project_number = ""
+gcp_jwt_path = "supabase/gcp.json"
+
+[functions.generate-explanation]
+verify_jwt = false
+
+[functions.upload-file]
+verify_jwt = false
+
+[functions.daily-facts]
+verify_jwt = false
