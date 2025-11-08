@@ -38,7 +38,7 @@ Make questions appropriate for the level:
 - eli12: Basic technical understanding 
 - eli18: More complex reasoning and applications`;
 
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${geminiApiKey}`, {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiApiKey}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ Make questions appropriate for the level:
     const fallbackQuiz = {
       questions: [
         {
-          question: `What is the main concept behind ${req.json().topic || 'this topic'}?`,
+          question: `What is the main concept behind this topic?`,
           options: [
             "A) It's a complex system with many parts",
             "B) It's a simple, single-purpose tool", 

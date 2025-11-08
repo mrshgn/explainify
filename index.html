@@ -1,32 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Explainify</title>
-    <meta name="description" content="Turn any complex topics simple" />
-    <meta name="author" content="ExplainLikeIm5" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explainify - Making Complex Topics Simple</title>
+    <meta name="description" content="Turn any complex topic into crystal-clear explanations. Upload documents, ask questions, and learn at your perfect level - ELI5, ELI12, or ELI18." />
+    <meta name="author" content="Explainify" />
+    <meta name="keywords" content="education, learning, explanations, simple, ELI5, document analysis, AI education" />
 
-    <!-- Favicon / Icons -->
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-
-    <!-- Open Graph (link preview when sharing) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Explainify — Making Complex Topics Simple" />
+    <meta property="og:title" content="Explainify - Making Complex Topics Simple" />
     <meta property="og:description" content="Turn any complex topic into crystal-clear explanations. Upload documents, ask questions, and learn at your perfect level." />
-    <style>
-      body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 0; background: #fff; color: #0f172a; display:flex; min-height:100vh; align-items:center; justify-content:center; }
-      .card { text-align:center; padding:2rem; }
-      .logo { width:72px; height:72px; display:block; margin:0 auto 1rem; }
-      a.brand { font-weight:700; font-size:1.25rem; color:inherit; text-decoration:none; }
-    </style>
+    <meta property="og:type" content="website" />
   </head>
+
   <body>
-    <main class="card" role="main">
-      <img class="logo" src="/icons/icon-192.png" alt="Explainify logo" />
-      <a class="brand" href="/">Explainify</a>
-      <p>Turn complex topics into crystal-clear explanations. Upload docs, ask questions, and learn at your level.</p>
-    </main>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
